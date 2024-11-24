@@ -11,15 +11,17 @@ is $exit, 0, 'command returns success';
 ok $out =~ /^cargo ([0-9\.]+)/, 'expected output';
 is(Alien::cargo->version, $1, 'version matches');
 
-note '';
-note '';
-note '';
+diag '';
+diag '';
+diag '';
 
-note "version = @{[ Alien::cargo->version ]}";
-note "output  = @{[ $out ]}";
+diag "version = @{[ Alien::cargo->version ]}";
+diag "type    = @{[ Alien::cargo->install_type ]}";
+diag "output  = @{[ $out ]}";
+diag "bin_dir = $_" for Alien::cargo->bin_dir;
 
-note '';
-note '';
+diag '';
+diag '';
 
 done_testing;
 

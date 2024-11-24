@@ -13,7 +13,14 @@ use base qw( Alien::Base );
 
 =head1 SYNOPSIS
 
+ use Alien::cargo;
+ use Env qw( @PATH );
+ 
+ unshift @PATH, Alien::cargo->bind_dir;
+
 =head1 DESCRIPTION
+
+This L<Alien> provides the Rust L<Cargo|https://doc.rust-lang.org/cargo/> command.
 
 =cut
 
@@ -52,14 +59,21 @@ sub dynamic_libs { () }
 
  my @dir = Alien::cargo->bin_dir;
 
+Provides the list of directories (if any) that are needed to add to the
+C<PATH> in order to run C<cargo>.
+
 =head2 version
 
  my $version = Alien::cargo->version;
+
+Returns the version of C<cargo>.
 
 =head2 install_type
 
  my $install_type = Alien::cargo->install_type;
  my $bool = Alien::cargo->install_type($install_type);
+
+Returns the install type.
 
 =cut
 

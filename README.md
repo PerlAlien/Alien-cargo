@@ -4,7 +4,16 @@ Find or download the cargo command (build system and package manager for Rust)
 
 # SYNOPSIS
 
+```perl
+use Alien::cargo;
+use Env qw( @PATH );
+
+unshift @PATH, Alien::cargo->bind_dir;
+```
+
 # DESCRIPTION
+
+This [Alien](https://metacpan.org/pod/Alien) provides the Rust [Cargo](https://doc.rust-lang.org/cargo/) command.
 
 # METHODS
 
@@ -14,11 +23,16 @@ Find or download the cargo command (build system and package manager for Rust)
 my @dir = Alien::cargo->bin_dir;
 ```
 
+Provides the list of directories (if any) that are needed to add to the
+`PATH` in order to run `cargo`.
+
 ## version
 
 ```perl
 my $version = Alien::cargo->version;
 ```
+
+Returns the version of `cargo`.
 
 ## install\_type
 
@@ -26,6 +40,8 @@ my $version = Alien::cargo->version;
 my $install_type = Alien::cargo->install_type;
 my $bool = Alien::cargo->install_type($install_type);
 ```
+
+Returns the install type.
 
 # AUTHOR
 

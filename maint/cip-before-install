@@ -1,5 +1,5 @@
 #!/bin/bash
 
 set -ex
-rm -rf ~/.cip
+sudo rm -rf ~/.cip
 cip exec mkdir -p /home/cip/tmp

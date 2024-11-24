@@ -43,6 +43,12 @@ my $bool = Alien::cargo->install_type($install_type);
 
 Returns the install type.
 
+# SEE ALSO
+
+- [Alien::Rust](https://metacpan.org/pod/Alien::Rust)
+- [Alien::cargo::clone](https://metacpan.org/pod/Alien::cargo::clone)
+- [FFI::Build::File::Cargo](https://metacpan.org/pod/FFI::Build::File::Cargo)>
+
 # AUTHOR
 
 Graham Ollis <plicease@cpan.org>

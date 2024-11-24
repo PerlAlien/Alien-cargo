@@ -6,7 +6,6 @@ use 5.008004;
 use File::Which qw( which );
 use Capture::Tiny qw( capture );
 use Env qw( @PATH $RUSTUP_HOME );
-use base qw( Alien::Base );
 
 # ABSTRACT: Find or download the cargo command (build system and package manager for Rust)
 # VERSION
@@ -86,3 +85,17 @@ sub install_type {
 }
 
 1;
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Alien::Rust>
+
+=item L<Alien::cargo::clone>
+
+=item L<FFI::Build::File::Cargo>>
+
+=back
+
+=cut

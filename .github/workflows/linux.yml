@@ -63,6 +63,7 @@ jobs:
 
       - name: Start-Container
         run: |
+          sudo rm -rf ~/.cip
           cip start
 
       - name: Diagnostics
